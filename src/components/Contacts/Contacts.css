@@ -1,0 +1,91 @@
+.contactus {
+    background-color: #D38974; 
+    color: #FDE5D9;
+    padding: 0px;
+    font-family: 'Courier New', monospace;
+    display: block;
+    margin:auto;
+    width: 25%;
+    border-radius: 10px;
+}
+
+.contactus .title h2{
+    font-weight: bold;
+    color: #FDE5D9;
+    background-color: #D38974;
+    border-radius: 10px;
+    padding: 10px;
+
+
+}
+
+.contact .main_form{
+    background-color: #D38974;
+    padding: 2em;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 0 2em #f5ccc0;
+    gap: 2em;
+}
+
+.row {
+    margin: auto;
+}
+
+.input-box{
+    background-color: #FDE5D9;
+    padding: 1em;
+    display: block;
+    flex-direction: column;
+    gap: 0.5em;
+    margin: 1em;
+    color: #703f33;
+    flex: 0 1 100%;
+}
+
+.entry{
+    margin: 0;
+    outline: none;
+    border: none;
+    background-color: #FDE5D9;
+    color: #703f33;
+    box-shadow: none;
+}
+
+.textarea-div{
+    height: 140px;
+}
+
+.textarea{
+    padding: 0;
+    height: 100%;
+    color: #703f33;
+}
+
+.textarea::placeholder{
+    color: #703f33;
+
+}
+
+.send-btn {
+    padding: 15px;
+    background: #FDE5D9;
+    color: #703f33;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    margin: auto;
+    display:block;
+    width: 40%;
+    font-size: 20px;
+}
+
+
+.contacts p{
+    color:#703f33;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+}
+
+

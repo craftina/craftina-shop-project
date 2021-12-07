@@ -29,7 +29,7 @@
     flex-direction: column;
     gap: 0.5em;
     border-radius: 20px;
-    margin: 1em;
+    margin: auto;
     color: #703f33;
 }
 
@@ -58,7 +58,7 @@
     border-radius: 30px;
     font-weight: 600;
     margin: auto;
-    display:block;
+    display: block;
     width: 50%;
 }
 
