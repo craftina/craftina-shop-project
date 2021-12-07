@@ -1,8 +1,8 @@
 .header {
     background-color: #FDE5D9;
-    border-bottom: #D38974;
+    border-bottom: #D38974 ;
     border-style: none none solid none;
-    padding: 10px;
+    padding: 10px 20px 0px 20px;
     margin-bottom: 50px;
 }
 .logo_section{

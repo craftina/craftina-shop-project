@@ -1,0 +1,29 @@
+.footer {
+    background: #D38974;
+    color: #FDE5D9; 
+    margin-top: 50px;
+    padding: 0;
+
+}
+
+.container-fluid{
+    padding-top: 10px;
+}
+
+.logo-words{
+    width: 108px;
+    height: 52px;
+    margin:auto;
+    display: block;
+}
+
+.copyright{
+    padding: 2px;
+    margin: auto;
+    color: #FDE5D9;
+    background-color: #D38974;
+}
+.copyright p{
+    margin: 5px;
+    font-size: 14px;
+}

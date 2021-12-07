@@ -9,10 +9,7 @@ const onClickLogo = ((e) => {
 });
 
     return (
-        <div className="header">
-           
-        <div className="container-fluid">
-            
+        <div className="header">  
            <div className="row">
            <div className="col-lg-9 drop-down-menu">
                  <div className="right_header_info">
@@ -40,7 +37,7 @@ const onClickLogo = ((e) => {
               </div>
            </div>
         </div>
-           </div>
+         
     );
 }
 
