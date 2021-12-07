@@ -1,5 +1,13 @@
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
+
 const Login = () => {
+    const navigate = useNavigate();
+    const onClickToRegister = () => {
+        navigate('/register');
+    }
+
+
     return (
         <div>
             <div className="screen-1">
@@ -19,7 +27,8 @@ const Login = () => {
                     </div>
                 </div>
                 <button className="login-btn">Login</button>
-                <div className="form-footer">Don't have a registration:<br /><span>Register</span></div>
+                <div className="form-footer">Don't have a registration:<br />
+                    <span onClick={onClickToRegister}>Register</span></div>
             </div>
         </div>
     );
