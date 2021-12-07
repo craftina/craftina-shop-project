@@ -1,0 +1,80 @@
+.screen-1 {
+    background: #D38974;
+    padding: 2em;
+    display: block;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 0 2em #f5ccc0;
+    gap: 2em;
+    width: 400px;
+    margin: auto;
+}
+
+.logo {
+    padding: 0 10px;
+    margin-bottom: 1em;
+}
+
+.logo img {
+    display: block;
+    width: 113px;
+    height: 139px;
+    margin: auto;
+}
+
+.input-box{
+    background: #FDE5D9;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 20px;
+    margin: 1em;
+    color: #703f33;
+}
+
+.input-box input {
+    outline: none;
+    border: none;
+    background-color: #FDE5D9;
+    color: #703f33;
+}
+
+.input-box input::placeholder {
+    color: #703f33;
+    font-size: 0.9em;
+}
+
+
+.password .show-hide {
+    margin-right: -5em;
+}
+
+.login-btn {
+    padding: 1em;
+    background: #FDE5D9;
+    color: #703f33;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    margin: auto;
+    display:block;
+    width: 50%;
+}
+
+.form-footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #FDE5D9;
+    gap: 14em;
+}
+
+.form-footer span {
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+button {
+    cursor: pointer;
+}
