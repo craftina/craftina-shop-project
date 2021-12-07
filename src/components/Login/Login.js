@@ -7,28 +7,41 @@ const Login = () => {
         navigate('/register');
     }
 
+    const onLoginBtn = (e) => {
+        e.preventDefault();
+        let formData = new FormData(e.currentTarget);
+        let {username, password} = Object.fromEntries(formData);
+        console.log(username);
+        console.log(password);
+        navigate('/');
+    }
+
 
     return (
         <div>
             <div className="screen-1">
-                <div className="logo">
-                    <img src="./images/form_logo.png" />
-                </div>
-                <div className="input-box username">
-                    <label for="username">Username</label>
-                    <div>
-                        <input type="text" name="username" placeholder="username" />
+                <form method="POST" onSubmit={onLoginBtn}>
+
+                    <div className="logo">
+                        <img src="./images/form_logo.png" />
                     </div>
-                </div>
-                <div className="input-box password">
-                    <label for="password">Password</label>
-                    <div>
-                        <input className="pas" type="password" name="password" placeholder="············" />
+                    <div className="input-box username">
+                        <label htmlFor="username">Username</label>
+                        <div>
+                            <input type="text" name="username" placeholder="username" />
+                        </div>
                     </div>
-                </div>
-                <button className="login-btn">Login</button>
-                <div className="form-footer">Don't have a registration:<br />
-                    <span onClick={onClickToRegister}>Register</span></div>
+                    <div className="input-box password">
+                        <label htmlFor="password">Password</label>
+                        <div>
+                            <input className="pas" type="password" name="password" placeholder="············" />
+                        </div>
+                    </div>
+                    <button className="login-btn">Login</button>
+                    <div className="form-footer">Don't have a registration:<br />
+                        <span onClick={onClickToRegister}>Register</span>
+                    </div>
+                </form>
             </div>
         </div>
     );

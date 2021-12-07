@@ -1,6 +1,13 @@
 import './Header.css';
+import {useNavigate} from 'react-router-dom';
 
 const Header = () => {
+const navigate = useNavigate();
+const onClickLogo = ((e) => {
+   e.preventDefault();
+   navigate('/')
+});
+
     return (
         <div className="header">
            
@@ -19,7 +26,7 @@ const Header = () => {
               <div className="col-lg-3 logo_section">
                  <div className="full">
                     <div className="center-desk">
-                       <div className="logo"> <a href="index.html"><img src="images/logo-transperant.png" alt="#" /></a> </div>
+                       <div className="logo"> <a href="index.html"><img onClick={onClickLogo} src="images/logo-transperant.png" alt="#" /></a> </div>
                     </div>
                  </div>
               </div>
