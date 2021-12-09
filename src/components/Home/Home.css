@@ -1,3 +1,17 @@
-.banner_main {
-    background-color: #FDE5D9;
+.container-home {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.carousel-container {
+    background-color: #D38974;
+    margin: auto;
+    width: 70%;
+    height: 37rem;
+    position: relative;
+    overflow: hidden;
+    border: #D38974;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 0.5rem;
 }

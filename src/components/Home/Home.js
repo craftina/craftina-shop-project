@@ -1,26 +1,30 @@
 import './Home.css';
+import CarouselElement from './CarouselElement/CarouselElement';
 
 const Home = () => {
     return (
-        <section className="slider_section">
-                <div className="banner_main">
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 mapimg">
-                                <div className="text-bg">
-                                    <h1>The latest <br /> <strong className="black_bold">furniture Design</strong><br /></h1>
-                                    <a href="#">Shop Now <i className='fa fa-angle-right'></i></a>
+                <section class="container-home">
+                            <div class="lx-card carousel-container">
+                                <CarouselElement />
+                                {/* <div class="item fade">
+                                    <div class="image"><img src="https://bit.ly/34xczKy" /></div>
                                 </div>
-                            </div>
-                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <div className="text-img">
-                                    <figure><img src="images/bg.jpg" /></figure>
+                                <div class="item fade">
+                                    <div class="image"><img src="https://bit.ly/3lkp5DW" /></div>
+                                    <div class="text is-text-left">
+                                        <h1 class="title"> <i class="far fa-hand-point-right"></i>&nbsp;This item has a title.</h1>
+                                        <p>This item has a caption, aligned to the left.</p>
+                                    </div>
                                 </div>
+                                <div class="item fade">
+                                    <div class="image"><img src="https://bit.ly/3iMHuI1" /></div>
+                                    <div class="text is-text-centered">
+                                        <p> <i class="fas fa-info-circle"></i>&nbsp;This item has a caption, aligned to the center.</p>
+                                    </div>
+                                </div><a class="prev has-dflex-center"><i class="fas fa-angle-left"></i></a><a class="next has-dflex-center"><i class="fas fa-angle-right"></i></a> */}
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+       
     );
 }
 
