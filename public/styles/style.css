@@ -2359,8 +2359,6 @@ margin-top: 35px;
     color: #fff;
 }
 .product_style_3 .product_detail {
-    background: #fff;
-    border: solid #e1e1e1 1px;
     width: 80%;
     margin: -40px 10% 0;
     position: relative;
@@ -2395,8 +2393,6 @@ margin-top: 35px;
     margin: 5px 0 0;
     padding: 0 10px;
     line-height: 18px;
-    color: #000;
-    font-weight: 400;
 
 }
 .tab_bar_section ul.nav.nav-tabs li a:hover {color: #0fbbad;}
