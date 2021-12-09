@@ -1,0 +1,35 @@
+#sidebar {
+    background-color: #D38974;
+}
+
+
+#dismiss{
+    color:#FDE5D9;
+    background-color: #D38974;
+    
+}
+#dismiss:hover {
+    color:#D38974;
+    background-color: #FDE5D9;
+}
+
+.products a {
+    margin-top:50px;
+    font-size: 30px;
+    padding: 10px;
+    max-width: 100%;
+    display: block;
+}
+#sidebar ul.components{
+    padding: 0;
+}
+
+a{
+    color:#FDE5D9;
+    
+}
+
+a:hover{
+    color:#D38974;
+    background-color: #FDE5D9;
+}

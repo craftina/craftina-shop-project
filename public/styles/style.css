@@ -2668,10 +2668,7 @@ padding: 60px 0px;
     transition: all 0.3s;
 }
 
-#dismiss:hover {
-    background: #111;
-    color: #fff;
-}
+
 
 .overlay {
     display: none;
@@ -2699,9 +2696,7 @@ padding: 60px 0px;
     background: #6d7fcc;
 }
 
-#sidebar ul.components {
-    padding: 55px 0;
-}
+
 
 #sidebar ul p {
     color: #fff;
@@ -2715,10 +2710,6 @@ padding: 60px 0px;
     font-weight: 300;
 }
 
-#sidebar ul li a:hover {
-    color: #0fbbad;
-    background: #fff;
-}
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;

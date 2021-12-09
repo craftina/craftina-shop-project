@@ -53,8 +53,8 @@
 
 .right_header_info ul li a{
     color: #D38974;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 18pt;
-    font-family: 'Courier New', monospace;
+    /* font-family: 'Courier New', monospace; */
 }
 

@@ -1,5 +1,6 @@
 import './Header.css';
 import {useNavigate} from 'react-router-dom';
+import DropDownMenu from './DropDownMenu/DropDownMenu';
 
 const Header = () => {
 const navigate = useNavigate();
@@ -9,6 +10,8 @@ const onClickLogo = ((e) => {
 });
 
     return (
+    <>
+    <DropDownMenu />
         <div className="header">  
            <div className="row">
            <div className="col-lg-9 drop-down-menu">
@@ -37,7 +40,7 @@ const onClickLogo = ((e) => {
               </div>
            </div>
         </div>
-         
+         </>
     );
 }
 
