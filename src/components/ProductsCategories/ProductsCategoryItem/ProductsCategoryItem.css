@@ -1,0 +1,33 @@
+.product_style_3 .product_img{
+    background: #D38974;
+    border-radius: 0.5rem;
+}
+
+.center{
+    background-color: #D38974;
+    border: #FDE5D9;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 0.5rem;
+}
+
+.product_style_3 .product_detail{
+    border-radius: 0.5rem;
+    border: 0px;
+    background-color: #FDE5D9;
+    box-shadow: 0 0 3em #fcb8a3;
+    color: #703f33;
+}
+
+.product_detail p{
+    font-size: 15pt;
+    font-weight: 600;
+
+}
+
+.product_style_3 .product_detail:hover{
+    color: #FDE5D9;
+    background-color: #D38974;
+
+}
+
