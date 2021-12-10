@@ -1,12 +1,37 @@
+import { useNavigate } from 'react-router-dom';
+import { getCategories } from '../../services/apiServices';
 import './ProductsCategories.css';
-import ProductsCategoryItem from './ProductsCategoryItem/ProductsCategoryItem.js'
+import {  useEffect, useState, Suspense, lazy } from 'react';
+const ProductsCategoryItem = lazy(() => import('./ProductsCategoryItem/ProductsCategoryItem'));
+
 
 const ProductsCategories = () => {
+    const [categories, setCategories] = useState([]);
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        getCategories()
+            .then(result => {
+                setCategories(result)
+            });
+    }, []);
+
+
     return (
         <div className="ourproduct">
             <div className="container">
                 <div className="row product_style_3">
-                    <ProductsCategoryItem />
+                    <Suspense fallback={
+                        <div>
+                            Loading...
+                        </div>
+                    }>
+                        {categories.length > 0
+                            ? categories.map(c => <ProductsCategoryItem key={c.objectId} category={c} navigate={navigate}/>)
+                            : <h3 className="no-articles">No Products Yet.</h3>
+                        }
+                    </Suspense>
 
                 </div>
             </div>

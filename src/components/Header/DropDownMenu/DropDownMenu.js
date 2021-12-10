@@ -1,5 +1,6 @@
 import './DropDownMenu.css';
 import { Route, Router } from 'react-router';
+import {Link} from 'react-router-dom';
 
 const DropDownMenu = () => {
     
@@ -14,13 +15,12 @@ const DropDownMenu = () => {
                 <div className="menu" >
 
                 <div className="products">
-                    <a href="/products">Products</a>
+                    <Link to="/products">Products</Link>
                 </div>
                 <ul className="list-unstyled components">
-                    <li> <a href="index.html">Mugs</a></li>
-                    <li> <a href="product.html">Jars</a></li>
-                    <li> <a href="contact.html">Jelewry</a></li>
-
+                    <li> <Link to="/products/mugs">Mugs</Link></li>
+                    <li> <Link to="/products/jars">Jars</Link></li>
+                    <li> <Link to="/products/earrings">Earrings</Link></li>
                 </ul>
                 </div>
 

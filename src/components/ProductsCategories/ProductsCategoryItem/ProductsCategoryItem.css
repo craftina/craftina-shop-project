@@ -3,6 +3,10 @@
     border-radius: 0.5rem;
 }
 
+.product_style_3 .product_img img{
+    width: 100%;
+}
+
 .center{
     background-color: #D38974;
     border: #FDE5D9;
