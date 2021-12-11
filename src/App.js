@@ -38,11 +38,12 @@ function App() {
       {/* <routes /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="contacts" element={<Contacts />} />
-        <Route exact path="products" element={<ProductsCategories />} />
-        <Route path="mugs" element={<ProductsCatalog />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route exact path="/products" element={<ProductsCategories />}/ >
+        <Route path="/mugs" element={<ProductsCatalog />} />
+      
       </Routes>
       <Footer />
     </div>

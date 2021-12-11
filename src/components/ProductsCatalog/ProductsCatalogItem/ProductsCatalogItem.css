@@ -32,10 +32,15 @@
 }
 
 .overlay_hover{
+    display:block;
+    padding:70px;
     background: rgba(242, 207, 197, 0.8);
 }
 
 .add-bt{
+
+    display:block;
+    margin: 50px 0;
     background-color: #D38974;
     color: #FDE5D9;  
 }
