@@ -11,7 +11,7 @@ const ProductsCategoryItem = ({category, navigate}) => {
                     </div>
                 </div>
                 
-                    <div className="product_detail text_align_center" onClick={() => {navigate('products/mugs')}}>
+                    <div className="product_detail text_align_center" onClick={() => {navigate(category.type)}}>
                         <p className="product_descr">{category.type}</p>
                     </div>
             </div>

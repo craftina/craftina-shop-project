@@ -42,7 +42,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="contacts" element={<Contacts />} />
         <Route exact path="products" element={<ProductsCategories />} />
-        <Route path="products/mugs" element={<ProductsCatalog />} />
+        <Route path="mugs" element={<ProductsCatalog />} />
       </Routes>
       <Footer />
     </div>

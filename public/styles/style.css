@@ -2368,7 +2368,7 @@ margin-top: 35px;
     width: 100%;
     padding: 20px 5px;
 }
-.product_style_3 .product_img .center img {height: 250px;}
+.product_style_3 .product_img .center img {height: 251px;}
 .text_align_center {
     text-align: center;
 }
@@ -2641,7 +2641,6 @@ padding: 60px 0px;
     background: #fff;
     color: #fff;
     transition: all 0.3s;
-    overflow-y: scroll;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
