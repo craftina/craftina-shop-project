@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes, useRoutes } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -9,18 +9,40 @@ import Contacts from "./components/Contacts/Contacts";
 import ProductsCategories from "./components/ProductsCategories/ProductsCategories";
 import ProductsCatalog from "./components/ProductsCatalog/ProductsCatalog";
 
+
+
 function App() {
+
+  // const routes = useRoutes([
+  //   { path: '/', element: <Home /> },
+  //   { path: '/login', element: <Login /> },
+  //   { path: '/register', element: <Register /> },
+  //   { path: '/contacts', element: <Contacts /> },
+  //   {
+  //     path: '/products',
+  //     element: <ProductsCategories />,
+  //     children: [
+  //       { path: 'mugs', element: <ProductsCatalog /> },
+  //       // { path: 'jars', element: <UserProfile /> },
+  //       // { path: 'earrings', element: <OwnUserProfile /> },
+  //     ]
+  //   }
+  // ]);
+
+
+
+
   return (
     <div className="App">
       <Header />
+      {/* <routes /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route exact path="/products" element={<ProductsCategories />}>
-          <Route  path="mugs" element={<ProductsCatalog />} />
-        </Route>
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="contacts" element={<Contacts />} />
+        <Route exact path="products" element={<ProductsCategories />} />
+        <Route path="products/mugs" element={<ProductsCatalog />} />
       </Routes>
       <Footer />
     </div>

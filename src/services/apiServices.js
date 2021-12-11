@@ -7,3 +7,12 @@ export function getCategories(){
          return result;
         })
 }
+
+export function getMugs(){
+    return fetch(`${url}/mugs`)
+    .then(res => res.json())
+    .then(result => {
+         return result;
+        })
+}
+

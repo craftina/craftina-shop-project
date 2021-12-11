@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './ProductsCategoryItem.css';
 
 const ProductsCategoryItem = ({category, navigate}) => {
@@ -12,7 +11,7 @@ const ProductsCategoryItem = ({category, navigate}) => {
                     </div>
                 </div>
                 
-                    <div className="product_detail text_align_center" onClick={() => {navigate('mugs')}}>
+                    <div className="product_detail text_align_center" onClick={() => {navigate('products/mugs')}}>
                         <p className="product_descr">{category.type}</p>
                     </div>
             </div>
