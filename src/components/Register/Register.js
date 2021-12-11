@@ -1,5 +1,6 @@
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
+import * as authService from '../../services/authService';
 
 
 const Register = () => {
@@ -12,9 +13,11 @@ const Register = () => {
         e.preventDefault();
         let formData = new FormData(e.currentTarget);
         let {email, username, password} = Object.fromEntries(formData);
-        console.log(email);
-        console.log(username);
-        console.log(password);
+        authService.register(email, username, password)
+        .then((authData) => {
+            console.log('registered');
+            console.log(authData);
+        })
         navigate('/');
     }
 

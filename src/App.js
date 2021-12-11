@@ -1,4 +1,7 @@
 import { Outlet, Route, Routes, useRoutes } from "react-router-dom";
+// const Backendless = require('backendless');
+// import Backendless from 'backendless';
+
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -41,9 +44,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/contacts" element={<Contacts />} />
-        <Route exact path="/products" element={<ProductsCategories />}/ >
+        <Route exact path="/products" element={<ProductsCategories />} />
         <Route path="/mugs" element={<ProductsCatalog />} />
-      
+
       </Routes>
       <Footer />
     </div>
