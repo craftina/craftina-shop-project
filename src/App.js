@@ -1,6 +1,4 @@
 import { Outlet, Route, Routes, useRoutes } from "react-router-dom";
-// const Backendless = require('backendless');
-// import Backendless from 'backendless';
 
 
 import Header from "./components/Header/Header";
@@ -13,11 +11,12 @@ import ProductsCategories from "./components/ProductsCategories/ProductsCategori
 import ProductsCatalog from "./components/ProductsCatalog/ProductsCatalog";
 
 
-
-function App() {
-
-  // const routes = useRoutes([
-  //   { path: '/', element: <Home /> },
+    
+    function App() {
+      
+      
+      // const routes = useRoutes([
+        //   { path: '/', element: <Home /> },
   //   { path: '/login', element: <Login /> },
   //   { path: '/register', element: <Register /> },
   //   { path: '/contacts', element: <Contacts /> },

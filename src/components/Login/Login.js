@@ -12,9 +12,7 @@ const Login = () => {
         e.preventDefault();
         let formData = new FormData(e.currentTarget);
         let {username, password} = Object.fromEntries(formData);
-        authService.login(username, password)
-        console.log(username);
-        console.log(password);
+        authService.login(username, password);
         navigate('/');
     }
 

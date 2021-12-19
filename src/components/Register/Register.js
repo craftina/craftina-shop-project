@@ -13,11 +13,7 @@ const Register = () => {
         e.preventDefault();
         let formData = new FormData(e.currentTarget);
         let {email, username, password} = Object.fromEntries(formData);
-        authService.register(email, username, password)
-        .then((authData) => {
-            console.log('registered');
-            console.log(authData);
-        })
+        authService.register(email, username, password);
         navigate('/');
     }
 
