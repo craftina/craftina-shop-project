@@ -1,6 +1,10 @@
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import * as authService from '../../services/authService';
+import AuthContext from '../../contexts/AuthContext';
+import { useContext } from 'react';
+
+
 
 const Login = () => {
     const navigate = useNavigate();
@@ -8,11 +12,17 @@ const Login = () => {
         navigate('/register');
     }
 
+    // const {onLogin} = useContext(AuthContext);
+
     const onLoginBtn = (e) => {
         e.preventDefault();
         let formData = new FormData(e.currentTarget);
-        let {username, password} = Object.fromEntries(formData);
+        let { username, password } = Object.fromEntries(formData);
         authService.login(username, password);
+
+        // let user = authService.user;
+        // console.log(user);
+        // onLogin(user)
         navigate('/');
     }
 

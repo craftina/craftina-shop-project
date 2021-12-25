@@ -10,10 +10,36 @@ import Contacts from "./components/Contacts/Contacts";
 import ProductsCategories from "./components/ProductsCategories/ProductsCategories";
 import ProductsCatalog from "./components/ProductsCatalog/ProductsCatalog";
 
+import AuthContext from './contexts/AuthContext';
+import { useState } from "react";
+
+
 
     
     function App() {
       
+
+      // const [userInfo, setUserInfo] = useState({
+      //   username: '',
+      //   userToken: '',
+      //   userId: ''
+      // });
+
+      // const onLogin = (user) => {
+      //   console.log(user);
+      //   setUserInfo(user);
+      //   console.log(userInfo);
+      // }
+
+    //   const logout = () =>{
+    //     // setUserInfo({
+    //     //   username: '',
+    //     //   userToken: '',
+    //     //   userId: ''
+    //     // })
+    //     sessionStorage.clear();
+    //     // console.log(userInfo);
+    //  }
       
       // const routes = useRoutes([
         //   { path: '/', element: <Home /> },
@@ -31,12 +57,14 @@ import ProductsCatalog from "./components/ProductsCatalog/ProductsCatalog";
   //   }
   // ]);
 
-
-
+  
+  
+  // <AuthContext.Provider value={{userInfo, onLogin, logout}}>
+  // </AuthContext.Provider>
 
   return (
     <div className="App">
-      <Header />
+      <Header  />
       {/* <routes /> */}
       <Routes>
         <Route path="/" element={<Home />} />
