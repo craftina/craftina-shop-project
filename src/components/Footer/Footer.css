@@ -18,6 +18,12 @@
     display: block;
 }
 
+ul.lik li a:hover {
+    background-color: #FDE5D9;
+    color: #D38974; 
+    border-radius: 0.5rem; 
+}
+
 
 .copyright{
     padding: 2px;

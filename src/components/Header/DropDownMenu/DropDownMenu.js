@@ -16,12 +16,12 @@ const DropDownMenu = () => {
                 <div className="menu" >
 
                     <div className="products">
-                        <Link to="/products">Products</Link>
+                        <Link to="products">Products</Link>
                     </div>
                     <ul className="list-unstyled components">
-                        <li> <Link to="/mugs">Mugs</Link></li>
-                        <li> <Link to="/jars">Jars</Link></li>
-                        <li> <Link to="/earrings">Earrings</Link></li>
+                        <li> <Link to="products/mugs">Mugs</Link></li>
+                        <li> <Link to="products/jars">Jars</Link></li>
+                        <li> <Link to="products/earrings">Earrings</Link></li>
                     </ul>
                 </div>
 

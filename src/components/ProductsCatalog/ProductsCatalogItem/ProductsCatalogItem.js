@@ -13,7 +13,7 @@ const ProductsCatalogItem = ({ item }) => {
                         <img src={item.imgUrl} alt="#" />
                         <div className="overlay_hover">
                             <Link className="add-bt" to="/">+ Add to cart</Link>
-                            <Link className="add-bt" to="/">Details</Link>
+                            <Link className="add-bt" to="details">Details</Link>
                         </div>
                     </div>
                 </div>

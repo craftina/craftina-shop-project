@@ -16,3 +16,11 @@ export function getMugs(){
         })
 }
 
+export function getMugDetails(id){
+    return fetch(`${url}/mugs/${id}`)
+    .then(res => res.json())
+    .then(result => {
+         return result;
+        })
+}
+
