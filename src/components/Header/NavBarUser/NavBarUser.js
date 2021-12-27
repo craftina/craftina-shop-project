@@ -35,7 +35,7 @@ const NavBarUser = () => {
         return(
         <ul className='user'>
            <li className="logout-link"><Link to="/" onClick={onLogout}>Logout</Link></li>
-           <li ><Link to="/">Cart</Link></li>
+           <li ><Link to="/cart">Cart</Link></li>
            {/* <li className="register-link"><Link to="/register">Register</Link></li> */}
         </ul>
         );

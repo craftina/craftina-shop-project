@@ -10,6 +10,7 @@ import Contacts from "./components/Contacts/Contacts";
 import ProductsCategories from "./components/ProductsCategories/ProductsCategories";
 import ProductsCatalog from "./components/ProductsCatalog/ProductsCatalog";
 import ItemDetails from "./components/ProductsCatalog/ProductsCatalogItem/ItemDetails/Itemdetails";
+import Cart from "./components/Cart/Cart";
 
 import AuthContext from './contexts/AuthContext';
 import { useState } from "react";
@@ -71,6 +72,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="cart" element={<Cart />} />
         <Route path="contacts" element={<Contacts />} />
         <Route path="details" element={<ItemDetails />} />
         <Route exact path="products/*"  >

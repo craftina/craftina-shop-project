@@ -24,5 +24,12 @@ export function getMugDetails(id){
         })
 }
 
-
+// export function getCart(ownerId){
+//     return fetch(`${url}/cart?sortBy=%60${ownerId}%60%20desc`)
+//     .then(res => res.json())
+//     .then(result => {
+//         console.log(result);
+//          return result;
+//         })
+// }
 
