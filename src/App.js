@@ -13,7 +13,7 @@ import ItemDetails from "./components/ProductsCatalog/ProductsCatalogItem/ItemDe
 import Cart from "./components/Cart/Cart";
 
 import AuthContext from './contexts/AuthContext';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -21,11 +21,29 @@ import { useState } from "react";
 function App() {
 
 
-  // const [userInfo, setUserInfo] = useState({
-  //   username: '',
-  //   userToken: '',
-  //   userId: ''
-  // });
+  const [userInfo, setUserInfo] = useState({
+    username: sessionStorage.username,
+        userToken: sessionStorage.userToken,
+        ownerId: sessionStorage.ownerId
+  });
+
+  useEffect(() => {
+    setUserInfo(userInfo)
+  }, [userInfo])
+
+  function onChangeUser () {
+    if(sessionStorage.length > 0){
+      setUserInfo(
+        {
+          username: sessionStorage.username,
+          userToken: sessionStorage.userToken,
+          ownerId: sessionStorage.ownerId
+        }
+      )
+    } else{
+      setUserInfo({})
+    }
+  }
 
   // const onLogin = (user) => {
   //   console.log(user);
@@ -61,28 +79,32 @@ function App() {
 
 
 
-  // <AuthContext.Provider value={{userInfo, onLogin, logout}}>
-  // </AuthContext.Provider>
 
   return (
-    <div className="App">
-      <Header />
-      {/* <routes /> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="cart" element={<Cart />} />
-        <Route path="contacts" element={<Contacts />} />
-        <Route path="details" element={<ItemDetails />} />
-        <Route exact path="products/*"  >
-          <Route path="" element={<ProductsCategories />}/>
-          <Route path="mugs" element={<ProductsCatalog />} />
-        </Route>
+    <AuthContext.Provider value={{ userInfo, onChangeUser }}>
+      <div className="App">
+        <Header />
+        {/* <routes /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="details" element={<ItemDetails />} >
+            <Route path="#description" element={<ItemDetails />} />
+            <Route path="#reviews" element={<ItemDetails />} />
 
-      </Routes>
-      <Footer />
-    </div>
+          </Route>
+          <Route exact path="products/*"  >
+            <Route path="" element={<ProductsCategories />} />
+            <Route path="mugs" element={<ProductsCatalog />} />
+          </Route>
+
+        </Routes>
+        <Footer />
+      </div>
+    </AuthContext.Provider>
   );
 }
 

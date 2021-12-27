@@ -46,9 +46,10 @@ export const login = (username, password) => {
         .then((res) => {
             onSuccess('logged', username);
             const userToken = res["user-token"];
-            const userId = res["objectId"];
+            const ownerId = res["ownerId"];
             sessionStorage.setItem('username', username);
             sessionStorage.setItem('userToken', userToken);
+            sessionStorage.setItem('ownerId', ownerId);
 
         })
         .catch(onError);
@@ -63,10 +64,12 @@ export const register = (email, username, password) => {
     Backendless.UserService.register(user)
         .then(() => {
             onSuccess('registered', username);
-            const userId = Backendless.LocalCache.get("current-user-id");
+            const ownerId = Backendless.LocalCache.get("current-user-id");
             const userToken = Backendless.LocalCache.get("user-token");
             sessionStorage.setItem('username', username);
             sessionStorage.setItem('userToken', userToken);
+            sessionStorage.setItem('ownerId', ownerId);
+
         })
         .catch(onError);
 }

@@ -1,0 +1,53 @@
+.tab-content>.tab-pane {
+    display: block;
+}
+
+.product_review {
+    color: #703f33;
+}
+
+/* h3{
+    color:#703f33;
+} */
+
+.collapse:not(.show) {
+    display: block;
+}
+
+.btn_review{
+    width:20%;
+    text-align: center;
+    padding: 1em;
+    background: #D38974;
+    color: #FDE5D9;
+    border: none;
+    border-radius: 1em;
+    font-weight: 600;
+    margin: auto;
+    display:block;
+}
+
+a.btn_review{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.commant_box textarea{
+border-radius: 1em;
+/* border:#D38974; */
+border: 3px solid #D38974;
+}
+
+.form-control {
+    color: #703f33;
+    background-color: #FDE5D9;
+    box-shadow: #fcb8a3 0px 0px 11px 4px;
+    border-color: #D38974;
+}
+
+.form-control:focus {
+    color: #703f33;
+    background-color: #FDE5D9;
+    border: #703f33 solid 2px !important;
+    box-shadow: 0 0 0 0.1rem #703f33;
+}
