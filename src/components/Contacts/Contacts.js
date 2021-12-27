@@ -1,5 +1,6 @@
 import './Contacts.css';
 import { useNavigate } from 'react-router';
+import MapComponent from './Map/Map';
 
 const Contacts = () => {
     const navigate = useNavigate();
@@ -28,10 +29,11 @@ const Contacts = () => {
                             <div className="contacts">
                                 <p> E-mail: .......................</p>
                                 <p> Phone: .......................</p>
-                                <p> Adress: .......................</p>
+                                <p> Adress: bul. "Vasil Levski" 50, 1142 Sofia Center, Sofia, Bulgaria</p>
                             </div>
                             <div className="map_section">
-                                <div id="map">
+                                <div id="map_component">
+                                <MapComponent/>
                                 </div>
                             </div>
                         </div>

@@ -18,6 +18,15 @@
 
 
 }
+.contact{
+    height: 580px;
+}
+
+.container-fluid{
+    height: 100%;
+}
+
+
 
 .contact .main_form{
     background-color: #D38974;
@@ -30,6 +39,7 @@
 
 .row {
     margin: auto;
+    height:100%;
 }
 
 .input-box{
@@ -80,6 +90,14 @@
     font-size: 20px;
 }
 
+.padddd{
+    height: 100%;
+}
+
+.contacts{
+    margin: 20px;
+
+}
 
 .contacts p{
     color:#703f33;
@@ -89,3 +107,9 @@
 }
 
 
+#map_component {
+    height: 100%;
+    border: 5px solid #D38974;
+    border-radius: 0.5rem;
+
+}
