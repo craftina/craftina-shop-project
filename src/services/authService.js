@@ -7,7 +7,7 @@ import { useContext } from 'react';
 const Backendless = require('backendless');
 Backendless.serverURL = "https://eu-api.backendless.com"
 Backendless.initApp('636B21A4-70D4-D302-FFC2-C24461E91D00',
-    '9508E315-CF0A-4701-96D7-5EAF69AAA3BE');
+'9508E315-CF0A-4701-96D7-5EAF69AAA3BE');
 
 
 
@@ -27,18 +27,23 @@ const url = 'https://dinkumdriving.backendless.app/api/data/users';
 
 // export const user = {};
 
+// export function addToCart(order){
+//     const storage = Backendless.Data.of('Order')
+    
+//     return Promise.all([
+//         storage.save(order)
+//     ])
+// }
+
+
 export const login = (username, password) => {
-    Backendless.UserService.login(username, password, true)
-        .then((res) => {
-            onSuccess('logged', username);
-            const userToken = res["user-token"];
-            const userId = res["objectId"];
-            sessionStorage.setItem('username', username);
-            sessionStorage.setItem('userToken', userToken);
-            // user.userId = userId;
-            // user.userToken = userToken;
-            // user.username = username;
-            // console.log(sessionStorage.getItem('username'));
+    return Backendless.UserService.login(username, password, true)
+    .then((res) => {
+        onSuccess('logged', username);
+        const userToken = res["user-token"];
+        const userId = res["objectId"];
+        sessionStorage.setItem('username', username);
+        sessionStorage.setItem('userToken', userToken);
 
         })
         .catch(onError);
@@ -68,6 +73,24 @@ export const logout = (username) => {
             onSuccess('logged out', username)
         })
         .catch(onError);
+}
+
+
+export function addToCart(name, price, imgUrl, ownerId){
+    var order = {
+        name: name,
+        price: price,
+        imgUrl: imgUrl,
+        ownerId: ownerId
+    }
+    
+    Backendless.Data.of( "cart" ).save( order )
+      .then( function(  ) {
+          console.log( "new order instance has been saved" );
+        })
+      .catch( function( error ) {
+          console.log( "an error has occurred " + error.message );
+        });
 }
 
 export const getCurrentUser = async () => {

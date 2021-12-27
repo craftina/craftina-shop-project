@@ -65,6 +65,11 @@
     color: #D38974;
 }
 
+.bt_main:focus{
+    background-color: rgba(242, 207, 197);
+    color: #D38974;
+}
+
 .product_desc p{
     color: #703f33;  
 }

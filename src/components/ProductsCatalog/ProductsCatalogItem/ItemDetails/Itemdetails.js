@@ -1,8 +1,12 @@
 import "./ItemDetails.css";
 import { getMugDetails } from "../../../../services/apiServices";
+import { addToCart } from "../../../../services/authService";
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 const ItemDetails = () => {
+    const navigate = useNavigate()
     const [mug, setMug] = useState({});
 
     useEffect(() => {
@@ -12,6 +16,14 @@ const ItemDetails = () => {
                 
             });
     }, [])
+
+
+    const onAddToCart = (e) => {
+        e.preventDefault();
+        const ownerId = sessionStorage.userToken;
+        addToCart(mug.name, mug.price, mug.imgUrl, ownerId);
+        navigate('/')
+    }
 
 
 
@@ -43,7 +55,7 @@ const ItemDetails = () => {
                             <div className="detail-contant">
                                 <p>{mug.objectId ? mug.details.description : ''}</p>
 
-                                <button type="submit" className="bt_main">Add to cart</button>
+                                <button type="submit" className="bt_main" onClick={onAddToCart}>Add to cart</button>
 
                             </div>
                         </div>
