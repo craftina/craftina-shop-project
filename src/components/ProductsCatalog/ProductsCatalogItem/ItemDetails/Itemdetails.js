@@ -12,6 +12,7 @@ const ItemDetails = ({ type }) => {
     const location = useLocation().pathname
     const id = location.split(`/${type}-`)[1];
 
+    
     const [item, setItem] = useState({});
     const [path, setPath] = useState();
     const [activeTab, setActiveTab] = useState();
