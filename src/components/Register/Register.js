@@ -1,10 +1,14 @@
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
 import * as authService from '../../services/authService';
+import { useAuthContext } from '../../contexts/AuthContext';
+
 
 
 const Register = () => {
     const navigate = useNavigate();
+    // const { login } = useAuthContext();
+
     const onClickToLogin = () => {
         navigate('/login');
     }
@@ -14,7 +18,10 @@ const Register = () => {
         let formData = new FormData(e.currentTarget);
         let {email, username, password} = Object.fromEntries(formData);
         authService.register(email, username, password);
-        navigate('/');
+        // authService.loginReq(username, password);
+        // const userData = await authService.getCurrentUser();
+        // login(userData);
+        navigate('/login');
     }
 
     return (

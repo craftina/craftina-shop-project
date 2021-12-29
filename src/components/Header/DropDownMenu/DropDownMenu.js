@@ -19,9 +19,9 @@ const DropDownMenu = () => {
                         <Link to="products">Products</Link>
                     </div>
                     <ul className="list-unstyled components">
-                        <li> <Link to="products/mugs">Mugs</Link></li>
-                        <li> <Link to="products/jars">Jars</Link></li>
-                        <li> <Link to="products/earrings">Earrings</Link></li>
+                        <li> <Link to="mugs">Mugs</Link></li>
+                        <li> <Link to="jars">Jars</Link></li>
+                        <li> <Link to="earrings">Earrings</Link></li>
                     </ul>
                 </div>
 

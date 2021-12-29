@@ -78,7 +78,7 @@
     padding-bottom: 5px;
 }
 
-.tab_bar_section ul.nav.nav-tabs li a{
+.tab_bar_section ul.nav.nav-tabs li button{
     background-color: #D38974;
     color: #FDE5D9;
     border: 2px;
@@ -86,11 +86,12 @@
     margin: 10px;
 }
 
-.tab_bar_section ul.nav.nav-tabs li a.active{
+.tab_bar_section ul.nav.nav-tabs li button.active{
     background-color: rgba(242, 207, 197);
     color: #D38974;
+    border: #D38974;
 }
-.tab_bar_section ul.nav.nav-tabs li a:hover{
+.tab_bar_section ul.nav.nav-tabs li button:hover{
     background-color: rgba(242, 207, 197);
     color: #D38974;
 }

@@ -1,13 +1,12 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { getCategories } from '../../services/apiServices';
 import './ProductsCategories.css';
-import {  useEffect, useState, Suspense, lazy } from 'react';
+import { useEffect, useState, Suspense, lazy } from 'react';
 const ProductsCategoryItem = lazy(() => import('./ProductsCategoryItem/ProductsCategoryItem'));
 
 
 const ProductsCategories = () => {
     const [categories, setCategories] = useState([]);
-    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -28,7 +27,7 @@ const ProductsCategories = () => {
                         </div>
                     }>
                         {categories.length > 0
-                            ? categories.map(c => <ProductsCategoryItem key={c.objectId} category={c} navigate={navigate}/>)
+                            ? categories.map(c => <ProductsCategoryItem key={c.objectId} category={c} />)
                             : <h3 className="no-articles">No Products Yet.</h3>
                         }
                     </Suspense>

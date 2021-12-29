@@ -1,28 +1,45 @@
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import * as authService from '../../services/authService';
-import AuthContext from '../../contexts/AuthContext';
+import { AuthContext } from '../../contexts/AuthContext';
+import { useNotificationContext, types } from '../../contexts/NotificationContext';
 import { useContext } from 'react';
 
 
 
 const Login = () => {
+
     const navigate = useNavigate();
+    // const { setUserInfo, user } = useContext(AuthContext);
+
+
     const onClickToRegister = () => {
         navigate('/register');
     }
 
-    // const {onLogin} = useContext(AuthContext);
+
 
     const onLoginBtn = (e) => {
         e.preventDefault();
         let formData = new FormData(e.currentTarget);
         let { username, password } = Object.fromEntries(formData);
-        authService.login(username, password);
+        authService.loginReq(username, password);
+        
+        // setTimeout(async () => {
+        //     userData = await authService.getCurrentUser();
+        //     // setUserInfo(userData);
+        //     setUserInfo({
+        //         username: userData.username,
+        //         userToken: userData['user-token'],
+        //         ownerId: userData.ownerId
+        //     });
+        //     console.log(user);
+        // }, 1000);
 
-        // let user = authService.user;
-        // console.log(user);
-        // onLogin(user)
+        
+        // authService.getUser()
+        // setUserInfo(userData);
+        // console.log(await authService.getCurrentUser());
         navigate('/');
     }
 

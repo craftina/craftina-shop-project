@@ -1,0 +1,30 @@
+.commant-text{
+    border-bottom: solid #D38974 1px;
+    padding-bottom: 5px;
+}
+
+.row{
+    margin-left: 20px;
+}
+
+.review_info{
+    margin-left: 20px;
+}
+.review_info h5{
+    font-size: 18px;
+}
+
+.msg{
+    font-size: 16px;
+}
+
+#review-btns button{
+    
+    padding: 0.3em;
+    background: #D38974;
+    color: #FDE5D9;
+    border: none;
+    border-radius: 0.3em;
+    margin: 5px;
+    display:inline-block;
+}

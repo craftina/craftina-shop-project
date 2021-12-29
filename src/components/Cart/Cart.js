@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { getCart } from '../../services/authService'
+import { getCart } from '../../services/apiServices'
 import { useEffect, useState, Suspense, lazy } from 'react';
 import './Cart.css';
 const CartItem = lazy(() => import('./CartItem/CartItem'));
@@ -40,9 +40,9 @@ const Cart = () => {
                                     ? cart.map(i => (<div className='item'>
                                         <div className='checkbox'>
                                             <input type="checkbox" />
-                                            <span class="checkmark"></span>
+                                            <span className="checkmark"></span>
                                         </div>
-                                        <CartItem key={i.objectId} item={i} />
+                                        <CartItem key={`${i.objectId}0`} item={i} />
                                     </div>))
                                     : <h3 className="no-articles">No Products Yet.</h3>
                                 }

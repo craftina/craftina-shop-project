@@ -1,6 +1,15 @@
 import './ReviewItem.css';
 
 const ReviewItem = () => {
+
+
+    const onDelete = () => {
+
+    }
+
+    const onEdit = () => {
+
+    }
     return (
         <div className="commant-text row">
             <div className="review_info">
@@ -13,6 +22,10 @@ const ReviewItem = () => {
                 <p className="msg">
                     Comment
                 </p>
+                <div id="review-btns">
+                    <button id="edit-review-btn" onClick={onEdit}>Edit</button>
+                    <button id="delete-review-btn" onClick={onDelete}>Delete</button>
+                </div>
             </div>
         </div>
     );
